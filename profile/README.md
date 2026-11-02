@@ -10,45 +10,39 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Turbo-Flash/turbo-flash-desktop/releases/latest">Download</a>
-  ·
-  <a href="https://github.com/Turbo-Flash/turbo-flash-desktop">Desktop</a>
-  ·
-  <a href="https://github.com/Turbo-Flash/turbo-flash-agent">Agent</a>
-  ·
-  <a href="https://github.com/Turbo-Flash/Turbo-Flash-CLI">CLI</a>
+  <code>Desktop</code>
+  &nbsp;·&nbsp;
+  <code>Agent</code>
+  &nbsp;·&nbsp;
+  <code>CLI</code>
+  &nbsp;·&nbsp;
+  <code>Privacy-first</code>
 </p>
 
 ---
 
-## What it is
+## What it offers
 
-Turbo Flash is an independent AI coding stack you run yourself:
+Turbo Flash is an independent AI coding stack you run yourself — not a thin client for someone else’s cloud.
 
-| Surface | Role |
+| Surface | What you get |
 | --- | --- |
-| **Desktop** | Tauri + React + Monaco IDE — explorer, tabs, agent chat, diff review, tests |
-| **Agent** | Owns the agent loop, tools, providers, and privacy gates — not an OpenCode wrapper |
-| **CLI** | Interactive terminal front-end over the same engine |
+| **Desktop IDE** | Native Tauri + React + Monaco shell: explorer, tabs, agent chat, staged diffs, tests, activity log |
+| **Agent runtime** | Owns the agent loop, tools, providers, and privacy gates — not an OpenCode wrapper |
+| **CLI** | Interactive `turbo-flash` sessions over the same engine |
 
-Local **Ollama** is the default. Cloud providers (e.g. OpenRouter) only run after **explicit, task-scoped approval**. No silent fallbacks that ship your repo off-machine.
+### Defaults that protect your repo
+
+- **Local Ollama first** — inference on your machine
+- **Staged edits** — accept or reject before anything hits disk
+- **Explicit cloud approval** — OpenRouter / remote models only after a task-scoped yes
+- **No silent fallbacks** that ship source off-machine
 
 ## Why it exists
 
-Most “AI IDEs” are thin clients for someone else’s cloud. Turbo Flash is built the other way around:
-
-- **Local by default** — inference on your machine when you want it
-- **Staged edits** — read the diff, accept or reject before anything hits disk
-- **Explicit permissions** — tests and cloud calls ask first
-- **One engine** — desktop and CLI share `turbo-flash-agent`
-
-## Start here
+Most “AI IDEs” are UI around a remote model. Turbo Flash inverts that: one engine, local by default, desktop and CLI as equal citizens.
 
 ```bash
-# Desktop (macOS Apple Silicon / Linux)
-# → https://github.com/Turbo-Flash/turbo-flash-desktop/releases/latest
-
-# Or drive the engine from the terminal
 turbo-flash model
 turbo-flash open .
 turbo-flash ask "fix the failing tests"
@@ -56,12 +50,14 @@ turbo-flash ask "fix the failing tests"
 
 ## Repositories
 
-| Repo | What you get |
+| Repo | Role |
 | --- | --- |
-| [`turbo-flash-desktop`](https://github.com/Turbo-Flash/turbo-flash-desktop) | Native desktop IDE shell |
-| [`turbo-flash-agent`](https://github.com/Turbo-Flash/turbo-flash-agent) | Agent runtime + provider gateway |
-| [`Turbo-Flash-CLI`](https://github.com/Turbo-Flash/Turbo-Flash-CLI) | Interactive CLI (`turbo-flash`) |
-| [`turbo-flash-website`](https://github.com/Turbo-Flash/turbo-flash-website) | Product site |
+| `turbo-flash-desktop` | Native IDE |
+| `turbo-flash-agent` | Agent runtime + provider gateway |
+| `Turbo-Flash-CLI` | Terminal front-end |
+| `turbo-flash-website` | Product site |
+
+> Product repositories are private while the MVP hardens. This profile is the public face of the stack.
 
 ---
 
